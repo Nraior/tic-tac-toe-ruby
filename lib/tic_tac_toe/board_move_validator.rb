@@ -10,6 +10,5 @@ class BoardMoveValidator
     return false unless first_number_in_range && second_number_in_range
 
     !fields[first.to_i][second.to_i].occupied?
-    # !field.occupied?
   end
 end
