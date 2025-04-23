@@ -13,12 +13,10 @@ class Player
 
   def handle_move(controller)
     input = gets.chomp.downcase
-
     return controller.quit_game if wants_quit?(input)
 
     board = controller.game_field
     first, second, * = input.split
-
     unless board.correct_move?(first, second)
       puts 'Wrong input, Type row & column fe. "2 1"'
       return false
